@@ -1,50 +1,50 @@
 %{
-    #include "tokens.h"
+#include "tokens.h"
 %}
 
+%option noyywrap
+%x COMMENT
 
 %%
-///variable types
+
+
 "int" {return INT;}
 "double" {return DOUBLE;}
 "float" {return FLOAT;}
 "char" {return CHAR;}
 "string" {return STRING;}
 
-///operators
-"!=" {return NOT EQUAL;}
-"==" {return ASSIGN;}
-">=" {return GREATER THAN EQUAL;}
-"<=" {return LESS THAN EQUAL;}
+
+"!=" {return NEQ;}
+"==" {return EQ;}
+">=" {return GTE;}
+"<=" {return LTE;}
 "&&" {return AND;}
 "||" {return OR;}
 
+
 "+" {return ADD;}
-"-" {return SUBTRACT;}
-"*" {return MULTIPLY;}
-"/" {return DIVIDE;}
+"-" {return SUB;}
+"*" {return MULT;}
+"/" {return DIV;}
 "%" {return MOD;}
-"=" {return EQUAL;}
-">" {return GREATER THAN;}
-"<" {return LESS THAN;}
+"=" {return ASSIGN;}
+">" {return GT;}
+"<" {return LT;}
 
 
-///keywords
 "for" {return FOR;}
 "while" {return WHILE;}
 "do" {return DO;}
 "if" {return IF;}
-"then" {return THEN;}
 "else" {return ELSE;}
 "return" {return RETURN;}
 
 
-///numbers and characters
 [0-9]+ {return NUM;}
-[a-zA-Z_][a-zA-Z0-9_]* { return ID; }
+[a-zA-Z_][a-zA-Z0-9_]* {return ID;}
 
 
-///get comments
 "//".* {}
 
 "/*"        { BEGIN(COMMENT); }
@@ -53,12 +53,9 @@
 <COMMENT>\n    { }
 
 
-///return nothing for whitespace
 [ \t\n]+ {}
 
 
-///catches extra cases
 . {return yytext[0];}
 
 %%
-yywrap()
