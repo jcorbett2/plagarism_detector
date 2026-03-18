@@ -16,8 +16,8 @@
 
 #define EQ      12
 #define NEQ     13
-#define GTE      14
-#define LTE      15
+#define GTE     14
+#define LTE     15
 #define AND     16
 #define OR      17
 
