@@ -29,6 +29,17 @@
 #define ASSIGN  23
 #define GT      24
 #define LT      25
+#define REF     37
+
+#define LPAREN   28
+#define RPAREN   29
+#define LBRACE   30
+#define RBRACE   31
+#define LBRACKET 32
+#define RBRACKET 33
+#define SEMICOLON 34
+#define COMMA     35
+#define DOT       36
 
 #define NUM     26
 #define ID      27

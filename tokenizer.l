@@ -7,7 +7,6 @@
 
 %%
 
-
 "int" {return INT;}
 "double" {return DOUBLE;}
 "float" {return FLOAT;}
@@ -31,6 +30,7 @@
 "=" {return ASSIGN;}
 ">" {return GT;}
 "<" {return LT;}
+"&" {return REF;}
 
 
 "for" {return FOR;}
@@ -39,6 +39,17 @@
 "if" {return IF;}
 "else" {return ELSE;}
 "return" {return RETURN;}
+
+
+"(" { return LPAREN; }
+")" { return RPAREN; }
+"{" { return LBRACE; }
+"}" { return RBRACE; }
+"[" { return LBRACKET; }
+"]" { return RBRACKET; }
+";" { return SEMICOLON; }
+"," { return COMMA; }
+"." { return DOT; }
 
 
 [0-9]+ {return NUM;}

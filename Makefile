@@ -16,6 +16,9 @@ FINGERPRINT = fingerprint.cc
 EXEC = lexer
 FP_EXEC = fingerprint
 
+# Directory to process
+INPUT_DIR = Examples
+
 # Default target
 all: $(EXEC) $(FP_EXEC)
 
@@ -31,9 +34,9 @@ $(EXEC): $(LEX_OUT) $(MAIN)
 $(FP_EXEC): $(FINGERPRINT)
 	$(CXX) $(FINGERPRINT) -o $(FP_EXEC)
 
-# Step 4: Run tokenizer and produce tokens.txt
+# Step 4: Run tokenizer on directory
 tokens: $(EXEC)
-	./$(EXEC) < input.txt
+	./$(EXEC) $(INPUT_DIR)
 
 # Step 5: Run full pipeline (tokenize + fingerprint)
 run: tokens $(FP_EXEC)
