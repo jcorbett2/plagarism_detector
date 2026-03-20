@@ -219,6 +219,6 @@ int main(int argc, char* argv[])
         out << file1Name << "\t\t| " << file2Name << "\t| " << similarityScore << "%\n";
     }
 
-
+    out.close();
     return 0;
 }
