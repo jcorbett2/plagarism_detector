@@ -8,6 +8,7 @@
 #include <unordered_set>
 using namespace std;
 
+///constants for k-mer and window size
 int K_MER_SIZE = 4;
 int WINDOW_SIZE = 3;
 
@@ -74,15 +75,19 @@ vector<string> make_minimum_window_groups(vector<size_t> encoded_k_mer_groups, i
     return minimum_window_value;   
 }
 
+///struct to store result with similarity score and both names
 struct Result {
     double score;
     string program_a;
     string program_b;
 };
 
+///overload operator to compare floats in result struct
 bool operator<(const Result &a, const Result &b) {
     return a.score > b.score;
 }
+
+
 
 int main(int argc, char* argv[])
 {

@@ -7,14 +7,14 @@ CFLAGS = -Wall
 LFLAGS = -lfl
 
 # Files
-LEX_FILE = tokenizer.l
+LEX_FILE = cmos.l
 LEX_OUT = lex.yy.c
 
-MAIN = main.c
-FINGERPRINT = fingerprint.cc
+MAIN = cmos-file-output.c
+FINGERPRINT = cmos.cc
 
 EXEC = lexer
-FP_EXEC = fingerprint
+FP_EXEC = cmos
 
 # Directory to process
 INPUT_DIR = Examples

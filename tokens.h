@@ -1,7 +1,7 @@
 #ifndef TOKENS_H
 #define TOKENS_H
 
-
+///Variable types
 #define INT         1
 #define DOUBLE      2
 #define FLOAT       3
@@ -19,6 +19,7 @@
 #define DELETE      15
 
 
+///Operators
 #define EQ          16
 #define GTE         17
 #define LTE         18
@@ -33,7 +34,6 @@
 #define ARROW       27
 #define SCOPE       28
 
-
 #define ADD         29
 #define SUB         30
 #define MULT        31
@@ -46,6 +46,7 @@
 #define NOT         38
 
 
+///Keywords
 #define FOR         39
 #define WHILE       40
 #define DO          41
@@ -57,24 +58,20 @@
 #define BREAK       47
 #define CONT        48
 
-
 #define CLASS       49
 #define STRUCT      50
 #define PUB         51
 #define PRIV        52
 
-
-
-
 #define TRUE        53
 #define FALSE       54
-#define NULL        55
+#define NULLPTR     55
 #define NUM         56
 #define ID          57
 
 
 
-
+///Delimiters
 #define LPAREN      58
 #define RPAREN      59
 #define LBRACE      60

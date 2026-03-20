@@ -7,6 +7,7 @@
 
 %%
 
+
 "int" {return INT;}
 "double" {return DOUBLE;}
 "float" {return FLOAT;}
@@ -71,8 +72,7 @@
 
 "true" {return TRUE;}
 "false" {return FALSE;}
-"nullptr" {return NULL;}
-"NULL" {return NULL;}
+"nullptr" {return NULLPTR;}
 
 
 
